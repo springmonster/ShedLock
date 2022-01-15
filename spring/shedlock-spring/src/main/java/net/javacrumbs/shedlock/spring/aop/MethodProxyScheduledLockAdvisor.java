@@ -1,12 +1,12 @@
 /**
  * Copyright 2009 the original author or authors.
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -75,9 +75,20 @@ class MethodProxyScheduledLockAdvisor extends AbstractPointcutAdvisor {
             this.lockingTaskExecutor = lockingTaskExecutor;
         }
 
+        /**
+         * kuanghc1: 使用切面，这里会被执行
+         *
+         * @param invocation 这里就是我们写了注解的方法
+         *
+         * @return
+         * @throws Throwable
+         */
         @Override
         public Object invoke(MethodInvocation invocation) throws Throwable {
             Class<?> returnType = invocation.getMethod().getReturnType();
+            /**
+             * 这里如果方法返回的是private或者void类型，会报错
+             */
             if (returnType.isPrimitive() && !void.class.equals(returnType)) {
                 throw new LockingNotSupportedException("Can not lock method returning primitive value");
             }

@@ -40,6 +40,9 @@ public @interface EnableSchedulerLock {
          * Scheduled method is proxied to ensure locking. Lock is created every time
          * {@link net.javacrumbs.shedlock.core.SchedulerLock} annotated is called (even if it is NOT called using Spring scheduler)
          */
+        /**
+         * kuanghc1: 这里是默认的实现方式，去代理方法
+         */
         PROXY_METHOD
     }
 

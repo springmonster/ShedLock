@@ -27,12 +27,12 @@
         <module>micronaut/test/micronaut-jdbc-new</module>
         <module>micronaut/test/micronaut-jdbc-template</module>
         <module>spring/shedlock-spring</module>
-        <module>spring/test/shedlock-springboot-old-test</module>
-        <module>spring/test/shedlock-springboot-test</module>
-        <module>spring/test/shedlock-springboot-future-test</module>
-        <module>spring/test/shedlock-springboot-sleuth-test</module>
-        <module>spring/test/shedlock-springboot-kotlin-test</module>
-        <module>spring/test/shedlock-testng-test</module>
+<!--        <module>spring/test/shedlock-springboot-old-test</module>-->
+<!--        <module>spring/test/shedlock-springboot-test</module>-->
+<!--        <module>spring/test/shedlock-springboot-future-test</module>-->
+<!--        <module>spring/test/shedlock-springboot-sleuth-test</module>-->
+<!--        <module>spring/test/shedlock-springboot-kotlin-test</module>-->
+<!--        <module>spring/test/shedlock-testng-test</module>-->
         <module>shedlock-test-support</module>
         <module>providers/etcd/shedlock-provider-etcd-jetcd</module>
         <module>providers/hazelcast/shedlock-provider-hazelcast</module>
